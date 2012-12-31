@@ -73,3 +73,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
+#My Maven Installation
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.3
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
