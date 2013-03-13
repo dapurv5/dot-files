@@ -79,5 +79,5 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.3
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 
