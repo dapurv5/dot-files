@@ -81,3 +81,7 @@ export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 
+#Scala Installation
+export SCALA_HOME=/home/dapurv5/ProgramFiles/scala-2.10.1
+export SCALA=$SCALA_HOME/bin
+export PATH=$SCALA:$PATH
