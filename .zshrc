@@ -85,3 +85,8 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 export SCALA_HOME=/home/dapurv5/ProgramFiles/scala-2.10.1
 export SCALA=$SCALA_HOME/bin
 export PATH=$SCALA:$PATH
+
+#SBT Installation for coursera course.
+export SBT_HOME=/home/dapurv5/ProgramFiles/sbt
+export SBT=$SBT_HOME/bin
+export PATH=$SBT:$PATH
