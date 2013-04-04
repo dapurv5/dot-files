@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 #My Maven Installation
-export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.3
+export M2_HOME=/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.3
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
