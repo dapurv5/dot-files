@@ -90,3 +90,5 @@ export PATH=$SCALA:$PATH
 export SBT_HOME=/home/dapurv5/ProgramFiles/sbt
 export SBT=$SBT_HOME/bin
 export PATH=$SBT:$PATH
+
+export PYTHONSTARTUP=~/.pythonrc
