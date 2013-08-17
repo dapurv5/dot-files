@@ -92,3 +92,34 @@ export SBT=$SBT_HOME/bin
 export PATH=$SBT:$PATH
 
 export PYTHONSTARTUP=~/.pythonrc
+
+
+
+#Bloomreach
+export BR_TOP=$HOME/br
+export EC2_HOME=$BR_TOP/tools/ec2
+export EC2_PRIVATE_KEY=$HOME/.ec2/pk-amazon.pem
+export EC2_CERT=$HOME/.ec2/cert-amazon.pem
+
+export PATH=$BR_TOP/tools/ec2/bin:$BR_TOP/tools/elastic-mapreduce:$BR_TOP/tools/gogrid:$PATH 
+
+export PATH=$BR_TOP/thirdparty/hadoop-0.20.205.0/bin:$PATH
+
+export PATH=$BR_TOP/work/src/backend/distribution/target/dist:$PATH
+
+
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+
+# From Document 2
+export backend="$BR_TOP/work/src/backend"
+export dist="$backend/distribution/target/dist"
+function s4cmd(){PYTHONPATH=$dist/python:$dist/python/br/s4cmd python -m br.s4cmd.s4cmd "$@";}
+
+export ANT_OPTS="-Xms512m -Xmx512m"
+export PYTHONPATH=$BR_TOP/work/src/backend/python/
+
+export MAVEN_OPTS=-Xmx1024m
+
+
+
