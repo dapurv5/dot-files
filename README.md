@@ -1,6 +1,8 @@
 INSTALL
 -------
 
+Pointers for setting up development environment on a new machine.
+
 ### MacOSX
 
 -  brew install node
