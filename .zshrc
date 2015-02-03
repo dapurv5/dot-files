@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -14,7 +14,7 @@ alias mci="mvn clean install -DskipTests"
 alias mec="mvn eclipse:clean"
 alias mee="mvn eclipse:eclipse"
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+#Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -22,10 +22,11 @@ alias .....="cd ../../../.."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+        colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+        colorflag="-G"    
 fi
+
 
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
@@ -47,23 +48,40 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias rmr="rm -rf"
 
 
-# Set to this to use case-sensitive completion
+
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
+# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to disable command auto-correction.
+# DISABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -72,43 +90,57 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+# User configuration
 
-#My Maven Installation
+export PATH="/home/dapurv5/ProgramFiles/sbt/bin:/home/dapurv5/ProgramFiles/scala-2.10.1/bin:/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.3/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
 export M2_HOME=/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.3
 export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
+export PATH=$M2:$PATH 
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 
-#Scala Installation
-export SCALA_HOME=/home/dapurv5/ProgramFiles/scala-2.10.1
+#Bloomreach
+export JAVA_OPTS="-Xms1024m -Xmx2048m"
+export BR_TOP=$HOME/br
+export EC2_HOME=$BR_TOP/tools/ec2
+export EC2_PRIVATE_KEY=~/.ec2/pk-amazon.pem  #$BR_TOP/work/src/ec2_keys/pk-SRB4RQBZ2M52CB5Q54XUF7H3BKUJHVBB.pem
+export EC2_CERT=~/.ec2/cert-amazon.pem  #$BR_TOP/work/src/ec2_keys/cert-SRB4RQBZ2M52CB5Q54XUF7H3BKUJHVBB.pem
+
+export PATH=$BR_TOP/tools/ec2/bin:$BR_TOP/tools/elastic-mapreduce:$BR_TOP/tools/gogrid:$PATH
+export PATH=$BR_TOP/thirdparty/hadoop-0.20.205.0/bin:$PATH
+export PATH=$BR_TOP/work/src/backend/distribution/target/dist:$PATH
+
+
+
+#Scala Installation =====
+export SCALA_HOME=$HOME/ProgramFiles/scala-2.10.1
 export SCALA=$SCALA_HOME/bin
 export PATH=$SCALA:$PATH
 
 #SBT Installation for coursera course.
-export SBT_HOME=/home/dapurv5/ProgramFiles/sbt
+export SBT_HOME=$HOME/ProgramFiles/sbt
 export SBT=$SBT_HOME/bin
 export PATH=$SBT:$PATH
 
 export PYTHONSTARTUP=~/.pythonrc
 
-
-
-#Bloomreach
-export BR_TOP=$HOME/br
-export EC2_HOME=$BR_TOP/tools/ec2
-export EC2_PRIVATE_KEY=$HOME/.ec2/pk-amazon.pem
-export EC2_CERT=$HOME/.ec2/cert-amazon.pem
-
-export PATH=$BR_TOP/tools/ec2/bin:$BR_TOP/tools/elastic-mapreduce:$BR_TOP/tools/gogrid:$PATH 
-
-export PATH=$BR_TOP/thirdparty/hadoop-0.20.205.0/bin:$PATH
-
-export PATH=$BR_TOP/work/src/backend/distribution/target/dist:$PATH
-
-
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 
 # From Document 2
@@ -121,5 +153,42 @@ export PYTHONPATH=$BR_TOP/work/src/backend/python/
 
 export MAVEN_OPTS=-Xmx1024m
 
+#scala installation =====
+
+export PATH=$PATH:$HOME/ProgramFiles/play-2.2.0
+export PATH=$PATH:$HOME/ProgramFiles/gwt-2.5.1
+
+export PLAY_PATH=$HOME/ProgramFiles/play-2.2.0
+export GWT_PATH=$HOME/ProgramFiles/gwt-2.5.1
 
 
+fabssh() {
+    realm=${1?Realm required}
+    role=${2?Role required}
+    instance=${3:-"-1"}
+    env PYTHONPATH=${BR_TOP}/work/src/ fab --fabfile=${HOME}/fabfile.py ssh:$realm,$role,$instance
+}
+
+faburl() {
+    realm=${1?Realm required}
+    role=${2?Role required}
+    instance=${3:-"-1"}
+    merchant=${4:-"neimanmarcus"}
+    env PYTHONPATH=${BR_TOP}/work/src/ fab --fabfile=${HOME}/fabfile.py url:$realm,$role,$instance,$merchant
+}
+
+fabfrom() {
+    if [ $# -ne 4 ]; then
+        echo fabfrom  realm role remotefile localfile
+    else
+        env PYTHONPATH=${HOME}/br/work/src/ fab --fabfile=${HOME}/fabfile.py scpfrom:$1,$2,$3,$4
+    fi
+}
+
+fabto() {
+    if [ $# -ne 4 ]; then
+        echo fabto localfile realm role remotefile 
+    else
+        env PYTHONPATH=${HOME}/br/work/src/ fab --fabfile=${HOME}/fabfile.py scpto:$2,$3,$4,$1
+    fi
+}
