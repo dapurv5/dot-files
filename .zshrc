@@ -92,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/dapurv5/ProgramFiles/sbt/bin:/home/dapurv5/ProgramFiles/scala-2.10.1/bin:/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.3/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/home/dapurv5/ProgramFiles/sbt/bin:/home/dapurv5/ProgramFiles/scala-2.10.1/bin:/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.5/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -111,7 +111,7 @@ export PATH="/home/dapurv5/ProgramFiles/sbt/bin:/home/dapurv5/ProgramFiles/scala
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export M2_HOME=/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.3
+export M2_HOME=/home/dapurv5/ProgramFiles/apache-maven/apache-maven-3.0.5
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH 
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
